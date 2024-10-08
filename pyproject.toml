@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "beardata"
+version = "0.1.0"
+description = ""
+authors = ["cdlsol <carloslopez.cl265@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+duckdb = "^1.1.1"
+pandas = "^2.2.3"
+fire = "^0.7.0"
+loguru = "^0.7.2"
+pydantic = "^2.9.2"
+pytest = "^8.3.3"
+ruff = "^0.6.9"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

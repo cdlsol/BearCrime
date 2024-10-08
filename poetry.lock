@@ -1,0 +1,300 @@
+[[package]]
+name = "annotated-types"
+version = "0.7.0"
+description = "Reusable constraint types to use with typing.Annotated"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
+name = "colorama"
+version = "0.4.6"
+description = "Cross-platform colored terminal text."
+category = "main"
+optional = false
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,>=2.7"
+
+[[package]]
+name = "duckdb"
+version = "1.1.1"
+description = "DuckDB in-process database"
+category = "main"
+optional = false
+python-versions = ">=3.7.0"
+
+[[package]]
+name = "exceptiongroup"
+version = "1.2.2"
+description = "Backport of PEP 654 (exception groups)"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+test = ["pytest (>=6)"]
+
+[[package]]
+name = "fire"
+version = "0.7.0"
+description = "A library for automatically generating command line interfaces."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+termcolor = "*"
+
+[[package]]
+name = "iniconfig"
+version = "2.0.0"
+description = "brain-dead simple config-ini parsing"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "loguru"
+version = "0.7.2"
+description = "Python logging made (stupidly) simple"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[package.dependencies]
+colorama = {version = ">=0.3.4", markers = "sys_platform == \"win32\""}
+win32-setctime = {version = ">=1.0.0", markers = "sys_platform == \"win32\""}
+
+[package.extras]
+dev = ["mypy (==v0.910)", "tox (==3.27.1)", "pytest (==6.1.2)", "pytest-cov (==2.12.1)", "colorama (==0.4.5)", "freezegun (==1.1.0)", "mypy (==v0.971)", "pytest-mypy-plugins (==1.9.3)", "exceptiongroup (==1.1.3)", "mypy (==v1.4.1)", "pre-commit (==3.4.0)", "tox (==4.11.0)", "pytest (==7.4.0)", "pytest-cov (==4.1.0)", "pytest-mypy-plugins (==3.0.0)", "colorama (==0.4.6)", "freezegun (==1.2.2)", "mypy (==v1.5.1)", "Sphinx (==7.2.5)", "sphinx-autobuild (==2021.3.14)", "sphinx-rtd-theme (==1.3.0)"]
+
+[[package]]
+name = "numpy"
+version = "2.1.2"
+description = "Fundamental package for array computing in Python"
+category = "main"
+optional = false
+python-versions = ">=3.10"
+
+[[package]]
+name = "packaging"
+version = "24.1"
+description = "Core utilities for Python packages"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
+name = "pandas"
+version = "2.2.3"
+description = "Powerful data structures for data analysis, time series, and statistics"
+category = "main"
+optional = false
+python-versions = ">=3.9"
+
+[package.dependencies]
+numpy = [
+    {version = ">=1.22.4", markers = "python_version < \"3.11\""},
+    {version = ">=1.23.2", markers = "python_version == \"3.11\""},
+    {version = ">=1.26.0", markers = "python_version >= \"3.12\""},
+]
+python-dateutil = ">=2.8.2"
+pytz = ">=2020.1"
+tzdata = ">=2022.7"
+
+[package.extras]
+test = ["hypothesis (>=6.46.1)", "pytest (>=7.3.2)", "pytest-xdist (>=2.2.0)"]
+pyarrow = ["pyarrow (>=10.0.1)"]
+performance = ["bottleneck (>=1.3.6)", "numba (>=0.56.4)", "numexpr (>=2.8.4)"]
+computation = ["scipy (>=1.10.0)", "xarray (>=2022.12.0)"]
+fss = ["fsspec (>=2022.11.0)"]
+aws = ["s3fs (>=2022.11.0)"]
+gcp = ["gcsfs (>=2022.11.0)", "pandas-gbq (>=0.19.0)"]
+excel = ["odfpy (>=1.4.1)", "openpyxl (>=3.1.0)", "python-calamine (>=0.1.7)", "pyxlsb (>=1.0.10)", "xlrd (>=2.0.1)", "xlsxwriter (>=3.0.5)"]
+parquet = ["pyarrow (>=10.0.1)"]
+feather = ["pyarrow (>=10.0.1)"]
+hdf5 = ["tables (>=3.8.0)"]
+spss = ["pyreadstat (>=1.2.0)"]
+postgresql = ["SQLAlchemy (>=2.0.0)", "psycopg2 (>=2.9.6)", "adbc-driver-postgresql (>=0.8.0)"]
+mysql = ["SQLAlchemy (>=2.0.0)", "pymysql (>=1.0.2)"]
+sql-other = ["SQLAlchemy (>=2.0.0)", "adbc-driver-postgresql (>=0.8.0)", "adbc-driver-sqlite (>=0.8.0)"]
+html = ["beautifulsoup4 (>=4.11.2)", "html5lib (>=1.1)", "lxml (>=4.9.2)"]
+xml = ["lxml (>=4.9.2)"]
+plot = ["matplotlib (>=3.6.3)"]
+output-formatting = ["jinja2 (>=3.1.2)", "tabulate (>=0.9.0)"]
+clipboard = ["PyQt5 (>=5.15.9)", "qtpy (>=2.3.0)"]
+compression = ["zstandard (>=0.19.0)"]
+consortium-standard = ["dataframe-api-compat (>=0.1.7)"]
+all = ["adbc-driver-postgresql (>=0.8.0)", "adbc-driver-sqlite (>=0.8.0)", "beautifulsoup4 (>=4.11.2)", "bottleneck (>=1.3.6)", "dataframe-api-compat (>=0.1.7)", "fastparquet (>=2022.12.0)", "fsspec (>=2022.11.0)", "gcsfs (>=2022.11.0)", "html5lib (>=1.1)", "hypothesis (>=6.46.1)", "jinja2 (>=3.1.2)", "lxml (>=4.9.2)", "matplotlib (>=3.6.3)", "numba (>=0.56.4)", "numexpr (>=2.8.4)", "odfpy (>=1.4.1)", "openpyxl (>=3.1.0)", "pandas-gbq (>=0.19.0)", "psycopg2 (>=2.9.6)", "pyarrow (>=10.0.1)", "pymysql (>=1.0.2)", "PyQt5 (>=5.15.9)", "pyreadstat (>=1.2.0)", "pytest (>=7.3.2)", "pytest-xdist (>=2.2.0)", "python-calamine (>=0.1.7)", "pyxlsb (>=1.0.10)", "qtpy (>=2.3.0)", "scipy (>=1.10.0)", "s3fs (>=2022.11.0)", "SQLAlchemy (>=2.0.0)", "tables (>=3.8.0)", "tabulate (>=0.9.0)", "xarray (>=2022.12.0)", "xlrd (>=2.0.1)", "xlsxwriter (>=3.0.5)", "zstandard (>=0.19.0)"]
+
+[[package]]
+name = "pluggy"
+version = "1.5.0"
+description = "plugin and hook calling mechanisms for python"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+dev = ["pre-commit", "tox"]
+testing = ["pytest", "pytest-benchmark"]
+
+[[package]]
+name = "pydantic"
+version = "2.9.2"
+description = "Data validation using Python type hints"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+annotated-types = ">=0.6.0"
+pydantic-core = "2.23.4"
+typing-extensions = [
+    {version = ">=4.12.2", markers = "python_version >= \"3.13\""},
+    {version = ">=4.6.1", markers = "python_version < \"3.13\""},
+]
+
+[package.extras]
+email = ["email-validator (>=2.0.0)"]
+timezone = ["tzdata"]
+
+[[package]]
+name = "pydantic-core"
+version = "2.23.4"
+description = "Core functionality for Pydantic validation and serialization"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+typing-extensions = ">=4.6.0,<4.7.0 || >4.7.0"
+
+[[package]]
+name = "pytest"
+version = "8.3.3"
+description = "pytest: simple powerful testing with Python"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+colorama = {version = "*", markers = "sys_platform == \"win32\""}
+exceptiongroup = {version = ">=1.0.0rc8", markers = "python_version < \"3.11\""}
+iniconfig = "*"
+packaging = "*"
+pluggy = ">=1.5,<2"
+tomli = {version = ">=1", markers = "python_version < \"3.11\""}
+
+[package.extras]
+dev = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "pygments (>=2.7.2)", "requests", "setuptools", "xmlschema"]
+
+[[package]]
+name = "python-dateutil"
+version = "2.9.0.post0"
+description = "Extensions to the standard Python datetime module"
+category = "main"
+optional = false
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7"
+
+[package.dependencies]
+six = ">=1.5"
+
+[[package]]
+name = "pytz"
+version = "2024.2"
+description = "World timezone definitions, modern and historical"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "ruff"
+version = "0.6.9"
+description = "An extremely fast Python linter and code formatter, written in Rust."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "six"
+version = "1.16.0"
+description = "Python 2 and 3 compatibility utilities"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
+
+[[package]]
+name = "termcolor"
+version = "2.5.0"
+description = "ANSI color formatting for output in terminal"
+category = "main"
+optional = false
+python-versions = ">=3.9"
+
+[package.extras]
+tests = ["pytest", "pytest-cov"]
+
+[[package]]
+name = "tomli"
+version = "2.0.2"
+description = "A lil' TOML parser"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
+name = "typing-extensions"
+version = "4.12.2"
+description = "Backported and Experimental Type Hints for Python 3.8+"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
+name = "tzdata"
+version = "2024.2"
+description = "Provider of IANA time zone data"
+category = "main"
+optional = false
+python-versions = ">=2"
+
+[[package]]
+name = "win32-setctime"
+version = "1.1.0"
+description = "A small Python utility to set file creation time on Windows"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[package.extras]
+dev = ["pytest (>=4.6.2)", "black (>=19.3b0)"]
+
+[metadata]
+lock-version = "1.1"
+python-versions = "^3.10"
+content-hash = "8cf6d5a68446e713dd56793d74dffe0eff6d5d6411915f4a98f6f33005aa853f"
+
+[metadata.files]
+annotated-types = []
+colorama = []
+duckdb = []
+exceptiongroup = []
+fire = []
+iniconfig = []
+loguru = []
+numpy = []
+packaging = []
+pandas = []
+pluggy = []
+pydantic = []
+pydantic-core = []
+pytest = []
+python-dateutil = []
+pytz = []
+ruff = []
+six = []
+termcolor = []
+tomli = []
+typing-extensions = []
+tzdata = []
+win32-setctime = []
